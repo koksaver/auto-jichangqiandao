@@ -519,7 +519,7 @@ func saveCookie(filePath string) {
 	// Encrypt the plaintext
 	ciphertext, err := RSApublicEncryptBlock(plaintext)
 	if err != nil {
-		log.Println("RSA Decrypt 失败", err)
+		log.Println("RSA Encrypt 失败", err)
 		return
 	}
 	saveFile(filePath, ciphertext)
