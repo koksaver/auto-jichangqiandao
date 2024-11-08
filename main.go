@@ -504,6 +504,7 @@ func initCookie(filePath string) {
 		}
 	} else if os.IsNotExist(err) {
 		log.Println("文件不存在")
+		saveCookie(filePath)
 	} else {
 		log.Println("其他错误:", err)
 	}
