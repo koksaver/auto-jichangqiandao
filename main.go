@@ -519,6 +519,7 @@ func saveCookie(filePath string) {
 	plaintext := string(jsonData) //"Hello, World! 废了惨"
 	// Encrypt the plaintext
 	ciphertext, err := RSApublicEncryptBlock(plaintext)
+	log.Println(ciphertext)
 	if err != nil {
 		log.Println("RSA Encrypt 失败", err)
 		return
